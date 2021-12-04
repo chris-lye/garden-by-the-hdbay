@@ -1,0 +1,36 @@
+<%- include("./partials/header") -%>
+
+<div class="box" id="garden-heading">
+  <h1> Your Garden </h1>
+</div>
+
+<% newPlants.forEach(function(plant){%>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class = "box">
+
+                <div class="box heading-box">
+                    <h2><%=  plant.name  %></h2>
+                </div>
+        
+                 <div class="item">
+                    <p>Water Level: <%=  plant.waterLevel  %></p>
+                </div>
+        
+                <div class="item">
+                    <p>Soil pH: <%=  plant.pH  %></p>
+                </div>
+        
+                <div class="item">
+                    <p>Sunlight Now: <%=  plant.sunlight  %>/10</p>
+                </div>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+</div>
+
+
+
+<%- include("./partials/footer") -%>
